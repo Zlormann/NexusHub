@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NEXUS-PROTOCOL // HUB</title>
     <style>
-        /* GRILLE CYBERPUNK NATIVE DU STUDIO */
+        /* INTERFACE GLOBALE // MATRIX GRID */
         body {
             background-color: #030305;
             background-image: 
@@ -26,7 +26,7 @@
             max-width: 620px;
         }
 
-        /* EN-TÊTE OPÉRATEUR SÉCURISÉ */
+        /* HEADER OPERATOR CHIRURGICAL */
         header {
             margin-bottom: 40px;
             border-left: 3px solid #00d8ff;
@@ -50,7 +50,6 @@
             letter-spacing: 1px;
         }
 
-        /* BLOCS DE SÉPARATION STRATÉGIQUE */
         section {
             margin-bottom: 40px;
         }
@@ -69,7 +68,6 @@
             margin-bottom: 25px;
         }
 
-        /* FILTRAGE ET AFFICHAGE DE LA SUB-ROUTINE */
         .modules-list {
             display: flex;
             flex-direction: column;
@@ -77,20 +75,102 @@
             align-items: center;
         }
 
-        .widget-wrapper {
-            background: #000000;
+        /* CONTENEURS DES MODULES */
+        .widget-wrapper, .custom-card {
+            width: 552px;
+            height: 167px;
+            background: #141419;
+            border: 1px solid #1c1c24;
             border-radius: 4px;
             overflow: hidden;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+            box-sizing: border-box;
         }
 
         iframe {
             display: block;
             border: none;
-            max-width: 100%;
         }
 
-        /* CONSOLE DES SYSTEM LOGS */
+        /* ARCHITECTURE DES CARTES NATIVES COMPATIBLES */
+        .custom-card {
+            display: flex;
+            position: relative;
+        }
+
+        .card-img {
+            width: 208px;
+            height: 100%;
+            background-color: #09090d;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-right: 1px solid #1c1c24;
+        }
+
+        .card-img::after {
+            content: "🎮";
+            font-size: 1.8rem;
+            opacity: 0.15;
+        }
+
+        .card-content {
+            flex: 1;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card-title {
+            font-size: 1.05rem;
+            font-weight: bold;
+            color: #ffffff;
+            margin: 0;
+        }
+
+        .card-author {
+            font-size: 0.75rem;
+            color: #75757a;
+            margin: 2px 0 8px 0;
+        }
+
+        .card-desc {
+            font-size: 0.8rem;
+            color: #b3b3b8;
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        .card-btn {
+            align-self: flex-start;
+            background: #da3b3b;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 6px 14px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            border-radius: 3px;
+            transition: background 0.2s ease;
+        }
+
+        .card-btn:hover {
+            background: #ff4c4c;
+        }
+
+        .itch-flag {
+            position: absolute;
+            bottom: 12px;
+            right: 16px;
+            font-size: 0.75rem;
+            color: #44444a;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
+
+        /* TERMINAL LOG SYSTEM */
         .log-box {
             background-color: rgba(0, 0, 0, 0.75);
             border: 1px solid #151520;
@@ -115,7 +195,6 @@
             margin-right: 8px;
         }
 
-        /* ACCENTS PHOSPHORESCENTS */
         .highlight-blue { color: #0099ff; }
         .highlight-cyan { color: #00d8ff; }
         .highlight-green { color: #a6ff00; }
@@ -127,42 +206,69 @@
         
         <header>
             <h1>NEXUS-PROTOCOL // HUB</h1>
-            <div class="operator-status">[ CONNECTION: SECURE // OPERATOR: CHAPELLIER ]</div>
+            <div class="operator-status">[ CONNEXION: SÉCURISÉE // OPÉRATEUR: CHAPELLIER ]</div>
         </header>
 
         <section>
-            <h2>Deployed Modules</h2>
+            <h2>Modules Déployés</h2>
             <div class="divider"></div>
             
             <div class="modules-list">
                 <div class="widget-wrapper">
-                    <iframe frameborder="0" src="https://itch.io/embed/4581295?dark=true" width="552" height="167"><a href="https://zlormack-studio.itch.io/nexus-tactics-bare-metal-strategy-163-kb">NEXUS-TACTICS // Bare-Metal Strategy [163 KB] by zlormack-studio</a></iframe>
+                    <iframe frameborder="0" src="https://itch.io/embed/4581295?dark=true" width="552" height="165"><a href="https://zlormack-studio.itch.io/nexus-tactics-bare-metal-strategy-163-kb">NEXUS-TACTICS // Bare-Metal Strategy [163 KB] by zlormack-studio</a></iframe>
                 </div>
 
-                <div class="widget-wrapper">
-                    <iframe frameborder="0" src="https://itch.io/embed/4573966_Z_OVERRIDE?dark=true" width="552" height="167"><a href="https://zlormack-studio.itch.io/z-override-final-core">Z-OVERRIDE // FINAL-CORE by zlormack-studio</a></iframe>
+                <div class="custom-card">
+                    <div class="card-img"></div>
+                    <div class="card-content">
+                        <div>
+                            <div class="card-title">Z-OVERRIDE // FINAL-CORE</div>
+                            <div class="card-author">par zlormack-studio</div>
+                            <div class="card-desc">Survivez à la corruption. Maîtrisez le code.</div>
+                        </div>
+                        <a href="https://zlormack-studio.itch.io/z-override-final-core" target="_blank" class="card-btn">Télécharger</a>
+                    </div>
+                    <div class="itch-flag">itch.io</div>
                 </div>
 
-                <div class="widget-wrapper">
-                    <iframe frameborder="0" src="https://itch.io/embed/455632_NEXUS_DEMO?dark=true" width="552" height="167"><a href="https://zlormack-studio.itch.io/nexus-protocol-demo">NEXUS-PROTOCOL-demo by zlormack-studio</a></iframe>
+                <div class="custom-card">
+                    <div class="card-img"></div>
+                    <div class="card-content">
+                        <div>
+                            <div class="card-title">NEXUS-PROTOCOL-demo</div>
+                            <div class="card-author">par zlormack-studio</div>
+                            <div class="card-desc">Pouvez-vous survivre au protocole de déstabilisation ?</div>
+                        </div>
+                        <a href="https://zlormack-studio.itch.io/nexus-protocol-demo" target="_blank" class="card-btn">Télécharger la démo</a>
+                    </div>
+                    <div class="itch-flag">itch.io</div>
                 </div>
 
-                <div class="widget-wrapper">
-                    <iframe frameborder="0" src="https://itch.io/embed/4570791_MUTANT_SHOOTER?dark=true" width="552" height="167"><a href="https://zlormack-studio.itch.io/mutant-shooter">Mutant Shooter by zlormack-studio</a></iframe>
+                <div class="custom-card">
+                    <div class="card-img"></div>
+                    <div class="card-content">
+                        <div>
+                            <div class="card-title">Mutant Shooter</div>
+                            <div class="card-author">par zlormack-studio</div>
+                            <div class="card-desc">Survie géométrique. Performance pure. (782 ko)</div>
+                        </div>
+                        <a href="https://zlormack-studio.itch.io/mutant-shooter" target="_blank" class="card-btn">Télécharger</a>
+                    </div>
+                    <div class="itch-flag">itch.io</div>
                 </div>
             </div>
         </section>
 
         <section>
-            <h2>System Log // Optimizations</h2>
+            <h2>System Log // Optimisations</h2>
             <div class="divider"></div>
             
             <div class="log-box">
-                <div class="log-entry"><span class="log-date">[2026.05.16]</span>Deployment of <span class="highlight-cyan">"NEXUS-TACTICS"</span>. Bare-Metal turn-based sub-routine locked at <span class="highlight-green">163 KB</span>.</div>
-                <div class="log-entry"><span class="log-date">[2026.05.15]</span>Binary "Z-OVERRIDE" optimized to <span class="highlight-blue">589 KB</span> (Win) / <span class="highlight-blue">769 KB</span> (Linux).</div>
-                <div class="log-entry"><span class="log-date">[2026.05.14]</span>Implementation of <span class="highlight-cyan">Symbols Stripping</span> pipeline. Binary size reduced by 42%.</div>
-                <div class="log-entry"><span class="log-date">[2026.05.12]</span>Zero-Asset Architecture: All visuals/audio now <span class="highlight-green">100% Procedural</span>.</div>
-                <div class="log-entry"><span class="log-date">[2026.05.10]</span>Core Engine migration to <span class="highlight-blue">Rust + Macroquad</span>. Deployment: Native.</div>
+                <div class="log-entry"><span class="log-date">[2026.05.16]</span>Déploiement de <span class="highlight-cyan">"NEXUS-TACTICS"</span>. Sous-routine au tour par tour Bare-Metal verrouillée à <span class="highlight-green">163 KB</span>.</div>
+                <div class="log-entry"><span class="log-date">[2026.05.15]</span>Binaire "Z-OVERRIDE" optimisé à <span class="highlight-blue">589 KB</span> (Win) / <span class="highlight-blue">769 KB</span> (Linux).</div>
+                <div class="log-entry"><span class="log-date">[2026.05.14]</span>Implémentation du pipeline de <span class="highlight-cyan">Stripping des Symboles</span>. Taille du binaire réduite de 42%.</div>
+                <div class="log-entry"><span class="log-date">[2026.05.12]</span>Architecture Zéro-Asset : Tous les visuels/audio sont désormais <span class="highlight-green">100% Procéduraux</span>.</div>
+                <div class="log-entry"><span class="log-date">[2026.05.10]</span>Migration du moteur principal vers <span class="highlight-blue">Rust + Macroquad</span>. Déploiement : Natif.</div>
             </div>
         </section>
 
